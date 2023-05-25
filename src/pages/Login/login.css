@@ -1,0 +1,64 @@
+.wrapper {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+input,
+.btnSignIn {
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+input {
+  background: #5A5B70;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+}
+
+input:focus {
+  border: 1px solid #fff;
+}
+
+input::placeholder {
+  color: #C7C7C7;
+}
+
+.btnSignIn {
+  cursor: pointer;
+  background: #C035A2;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+  transition: background 0.2s ease-in-out;
+
+}
+
+.btnSignIn:hover {
+  background: #8b1571;
+}
+
+@media all and (max-width:767px) {
+  img {
+    width: 50%;
+  }
+}
+
+
+@media all and (min-width:768px) {
+  .right {
+    background: #38394E;
+  }
+
+  .left {
+    background: #fff;
+    display: grid;
+    place-items: center;
+    padding: 20px 0;
+  }
+
+  img {
+    width: 85%;
+  }
+}
