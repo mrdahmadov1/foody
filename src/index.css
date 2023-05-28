@@ -4,3 +4,12 @@ body {
   background: #1E1E30;
   color: #fff;
 }
+
+button,
+input {
+  box-shadow: none;
+  border: none;
+  font-family: inherit;
+  outline: none;
+  font-size: inherit;
+}
