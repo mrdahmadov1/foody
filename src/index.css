@@ -1,0 +1,21 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #1E1E30;
+  color: #fff;
+}
+
+button,
+input {
+  box-shadow: none;
+  border: none;
+  font-family: inherit;
+  outline: none;
+  font-size: inherit;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,32 @@
+.container {
+  background: #27283C;
+  color: #fff;
+  padding: 8px 36px 8px 24px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.logo {
+  color: #F5F5F5;
+  font-size: 28px;
+  font-weight: 800;
+  margin-left: 12px;
+}
+
+.logoDot {
+  color: #EAAB00;
+}
+
+.profileImage {
+  font-size: 24px;
+}
+
+@media all and (max-width:500px) {
+  .btnAddProduct::before {
+    content: '+';
+  }
+
+  .btnAddProduct {
+    padding: 4px 8px;
+  }
+}

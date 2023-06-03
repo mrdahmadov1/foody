@@ -1,0 +1,66 @@
+.navList {
+  background-color: #C74FEB;
+  padding: 25px 15px 100px;
+  border-radius: 6px;
+  max-width: 200px;
+}
+
+.mobNavList {
+  background-color: #C74FEB;
+  padding: 25px 15px 100px;
+  border-radius: 6px;
+  max-width: 200px;
+
+  position: absolute;
+  top: 0;
+  left: -500px;
+  min-width: 300px;
+  height: 100vh;
+
+}
+
+.mobNavListOpened {
+  background-color: #C74FEB;
+  padding: 25px 15px 100px;
+  max-width: 200px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 300px;
+  height: 100vh;
+}
+
+.listItem {
+  border-radius: 4px;
+  padding: 4px 6px 4px 12px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.listItem:hover,
+.isActive {
+  background-color: #cc70e8;
+}
+
+.listItem p,
+.listItem i {
+  color: #fff;
+  font-weight: 600;
+}
+
+.logo {
+  color: #F5F5F5;
+  font-size: 28px;
+  font-weight: 800;
+  margin-left: 4px;
+  margin-bottom: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoDot {
+  color: #EAAB00;
+}
