@@ -1,5 +1,5 @@
+/* eslint-disable no-const-assign */
 import style from "./assets/css/style.module.css";
-import { useEffect } from "react";
 import Button from "../../UI/button";
 import Input from "../../UI/input";
 import {
@@ -11,30 +11,27 @@ import heroLogin from "./assets/images/login.png";
 import {
   setUsername,
   setPassword,
-  checkLogin,
+  setIsLoggedIn,
 } from "../../features/login/loginSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { axiosInstance } from "../../firebase";
-import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const { isLoggedIn } = useSelector((state) => state.login);
+  const { isLoggedIn, username, password } = useSelector(
+    (state) => state.login
+  );
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (isLoggedIn) {
-      navigate("/admin/");
-    } else {
-      navigate("/admin/login");
-    }
-  }, [isLoggedIn]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     axiosInstance.get("/admin.json").then((response) => {
-      dispatch(checkLogin(response.data));
+      const admin = response.data;
+      if (username === admin.username && password === admin.password) {
+        dispatch(setIsLoggedIn(true));
+        localStorage.setItem("isLoggedIn", true);
+      }
+      console.log(isLoggedIn);
     });
   };
 

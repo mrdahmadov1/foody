@@ -13,12 +13,15 @@ function Input(props) {
     type,
     onChangeProps,
     border,
+    label,
+    height,
   } = props;
 
   const initialStyle = {
     background,
     color,
     width,
+    height,
     borderRadius,
     padding,
     margin,
@@ -41,14 +44,17 @@ function Input(props) {
   };
 
   return (
-    <input
-      type={type}
-      onChange={handleChange}
-      onFocus={handleFocus}
-      onBlur={handleBlur}
-      style={style}
-      placeholder={placeholder}
-    />
+    <div className="d-flex flex-column gap-1">
+      {{ label } && <label>{label}</label>}
+      <input
+        type={type}
+        onChange={handleChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        style={style}
+        placeholder={placeholder}
+      />
+    </div>
   );
 }
 

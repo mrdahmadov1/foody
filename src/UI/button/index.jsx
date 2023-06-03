@@ -26,6 +26,8 @@ function Button(props) {
     display,
     alignItems,
     onClickProps,
+    width,
+    flexDirection,
   } = props;
 
   const style = {
@@ -38,6 +40,8 @@ function Button(props) {
     fontWeight,
     display,
     alignItems,
+    width,
+    flexDirection,
   };
 
   const handleClick = () => {

@@ -13,3 +13,9 @@ input {
   outline: none;
   font-size: inherit;
 }
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}

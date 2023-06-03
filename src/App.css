@@ -1,0 +1,20 @@
+.parent {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+  margin-top: 25px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.mobDiv2 {
+  grid-area: 1 / 1 / 2 / 3;
+}

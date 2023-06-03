@@ -1,0 +1,12 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "admin"
+  },
+  "orders": {
+    "title": {
+      "display": true,
+      "text": "World Wide Wine Production 2018"
+    }
+  }
+}

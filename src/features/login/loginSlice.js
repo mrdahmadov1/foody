@@ -7,7 +7,9 @@ export const loginSlice = createSlice({
       ? localStorage.getItem("username")
       : "",
     password: "",
-    isLoggedIn: false,
+    isLoggedIn: localStorage.getItem("isLoggedIn")
+      ? localStorage.getItem("isLoggedIn")
+      : false,
   },
   reducers: {
     setUsername: (state, action) => {
@@ -16,18 +18,12 @@ export const loginSlice = createSlice({
     setPassword: (state, action) => {
       state.password = action.payload;
     },
-    checkLogin: (state, action) => {
-      if (
-        state.username === action.payload.username &&
-        state.password === action.payload.password
-      ) {
-        state.isLoggedIn = true;
-        localStorage.setItem("username", state.username);
-      }
+    setIsLoggedIn: (state, action) => {
+      state.isLoggedIn = action.payload;
     },
   },
 });
 
-export const { setUsername, setPassword, checkLogin } = loginSlice.actions;
+export const { setUsername, setPassword, setIsLoggedIn } = loginSlice.actions;
 
 export default loginSlice.reducer;
